@@ -34,7 +34,7 @@ namespace The_Labyrinth
         public int agility { get; set; }
         public int intelligence { get; set; }
         public int charisma { get; set; }
-        public int luck { get; set; }
+        public int hitchance { get; set; }
         public int level { get; set; }
         public int xp { get; set; }
 

@@ -135,7 +135,7 @@ namespace The_Labyrinth
             character.agility = rollmultidice(4, 6);
             character.intelligence = rollmultidice(4, 6);
             character.charisma = rollmultidice(4, 6);
-            character.luck = rollmultidice(4, 6);
+            character.hitchance = rollmultidice(4, 6);
 
             //add species based modifiers
             if (character.species == Species.Human)
@@ -152,7 +152,7 @@ namespace The_Labyrinth
             {
                 character.health = 30;
                 character.strength += 3;
-                character.luck += 3;
+                character.hitchance += 3;
             }
             else
             {
@@ -174,7 +174,7 @@ namespace The_Labyrinth
             else if (character.classType == ClassType.Thief)
             {
                 character.agility += 5;
-                character.luck += 5;
+                character.hitchance += 5;
                 character.strength -= 2;
             }
             else if (character.classType == ClassType.Mage)
@@ -186,7 +186,7 @@ namespace The_Labyrinth
             else if (character.classType == ClassType.Cleric)
             {
                 character.charisma += 5;
-                character.luck += 5;
+                character.hitchance += 5;
             }
             else
             {
@@ -211,9 +211,9 @@ namespace The_Labyrinth
             {
                 character.charisma = 3;
             }
-            if (character.luck <= 0)
+            if (character.hitchance <= 0)
             {
-                character.luck = 3;
+                character.hitchance = 3;
             }
         }
 
