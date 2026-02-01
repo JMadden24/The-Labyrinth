@@ -10,61 +10,127 @@ namespace The_Labyrinth
         {
             Weapons = new List<WeaponStats>
             {
-                new WeaponStats(
-                    weaponName: "Simple Dagger",
-                    weaponType: WeaponType.Daggers,
+                new WeaponStats("Steel Sword", WeaponType.Sword,
+                    "Slash", "Thrust", null,
+                    DamageType.Slashing, DamageType.Piercing, DamageType.None,
+                    new[] {1,6,0}, new[] {1,6,2}, new[] {0,0,0},
+                    true),
 
-                    attack1: "Slash",
-                    attack2: "Stab",
-                    specialAttack: null,
+                new WeaponStats("Iron Shortsword", WeaponType.Shortsword,
+                    "Slash", "Stab", null,
+                    DamageType.Slashing, DamageType.Piercing, DamageType.None,
+                    new[] {1,6,2}, new[] {1,6,0}, new[] {0,0,0},
+                    true),
 
-                    attackDamage1: DamageType.Slashing,
-                    attackDamage2: DamageType.Piercing,
-                    attackDamage3: DamageType.None,
+                new WeaponStats("Hand Axe", WeaponType.Axe,
+                    "Chop", null, null,
+                    DamageType.Slashing, DamageType.None, DamageType.None,
+                    new[] {1,8,0}, new[] {0,0,0}, new[] {0,0,0},
+                    true),
 
-                    damageDice1: new[] { 1,4,2 },
-                    damageDice2: new[] { 1,6,0 },
-                    damageDice3: new[] { 0,0,0 },
+                new WeaponStats("Woodcutter Axe", WeaponType.Axe,
+                    "Hack", null, null,
+                    DamageType.Slashing, DamageType.None, DamageType.None,
+                    new[] {1,10,2}, new[] {0,0,0}, new[] {0,0,0},
+                    false),
 
-                    isOneHanded: true
-                ),
-                new WeaponStats(
-                    weaponName: "Simple Rapier",
-                    weaponType: WeaponType.Rapier,
+                new WeaponStats("Greatclub", WeaponType.Mace,
+                    "Heavy Swing", null, null,
+                    DamageType.Bludgeoning, DamageType.None, DamageType.None,
+                    new[] {2,6,0}, new[] {0,0,0}, new[] {0,0,0},
+                    false),
 
-                    attack1: "Thrust",
-                    attack2: "Cut",
-                    specialAttack: null,
+                new WeaponStats("Light Mace", WeaponType.Mace,
+                    "Smash", null, null,
+                    DamageType.Bludgeoning, DamageType.None, DamageType.None,
+                    new[] {1,6,2}, new[] {0,0,0}, new[] {0,0,0},
+                    true),
 
-                    attackDamage1: DamageType.Piercing,
-                    attackDamage2: DamageType.Slashing,
-                    attackDamage3: DamageType.None,
+                new WeaponStats("Hunting Spear", WeaponType.Spear,
+                    "Thrust", null, null,
+                    DamageType.Piercing, DamageType.None, DamageType.None,
+                    new[] {1,8,0}, new[] {0,0,0}, new[] {0,0,0},
+                    false),
 
-                    damageDice1: new[] { 1,6,2 },
-                    damageDice2: new[] { 1,4,2 },
-                    damageDice3: new[] { 0,0,0 },
+                new WeaponStats("Steel Dagger", WeaponType.Daggers,
+                    "Stab", "Slash", null,
+                    DamageType.Piercing, DamageType.Slashing, DamageType.None,
+                    new[] {1,6,0}, new[] {1,4,2}, new[] {0,0,0},
+                    true),
 
-                    isOneHanded: true
-                ),
-                new WeaponStats(
-                    weaponName: "Shortsword",
-                    weaponType: WeaponType.Sword,
+                new WeaponStats("Hand Crossbow", WeaponType.Daggers,
+                    "Simple Shot", null, null,
+                    DamageType.Piercing, DamageType.None, DamageType.None,
+                    new[] {1,6,2}, new[] {0,0,0}, new[] {0,0,0},
+                    true),
 
-                    attack1: "Slash",
-                    attack2: "Stab",
-                    specialAttack: null,
+                new WeaponStats("Twin Daggers", WeaponType.Daggers,
+                    "Double Stab", "Double Slash", null,
+                    DamageType.Piercing, DamageType.Slashing, DamageType.None,
+                    new[] {2,4,2}, new[] {2,6,0}, new[] {0,0,0},
+                    true),
 
-                    attackDamage1: DamageType.Slashing,
-                    attackDamage2: DamageType.Piercing,
-                    attackDamage3: DamageType.None,
+                new WeaponStats("Simple Rapier", WeaponType.Rapier,
+                    "Thrust", "Slash", null,
+                    DamageType.Piercing, DamageType.Slashing, DamageType.None,
+                    new[] {1,6,2}, new[] {1,4,2}, new[] {0,0,0},
+                    true),
 
-                    damageDice1: new[] { 1,6,2 },
-                    damageDice2: new[] { 1,6,2 },
-                    damageDice3: new[] { 0,0,0 },
+                new WeaponStats("Fire Staff", WeaponType.Staff,
+                    "Strike", "Fire Ball", null,
+                    DamageType.Bludgeoning, DamageType.Fire, DamageType.None,
+                    new[] {1,6,0}, new[] {2,4,0}, new[] {0,0,0},
+                    false),
 
-                    isOneHanded: true
-                ),
+                new WeaponStats("Ice Staff", WeaponType.Staff,
+                    "Strike", "Ice Spear", null,
+                    DamageType.Bludgeoning, DamageType.Ice, DamageType.None,
+                    new[] {1,6,0}, new[] {1,6,2}, new[] {0,0,0},
+                    false),
+
+                new WeaponStats("Earth Wand", WeaponType.Wand,
+                    "Stone Bullet", null, null,
+                    DamageType.Earth, DamageType.None, DamageType.None,
+                    new[] {1,6,0}, new[] {0,0,0}, new[] {0,0,0},
+                    true),
+
+                new WeaponStats("Wind Wand", WeaponType.Wand,
+                    "Wind Blast", null, null,
+                    DamageType.Wind, DamageType.None, DamageType.None,
+                    new[] {1,6,2}, new[] {0,0,0}, new[] {0,0,0},
+                    true),
+
+                new WeaponStats("Holy Grimoire", WeaponType.Grimoire,
+                    "Gods Blessing", "Divine Light", null,
+                    DamageType.Holy, DamageType.Holy, DamageType.None,
+                    new[] {1,8,0}, new[] {3,3,0}, new[] {0,0,0},
+                    true),
+
+                new WeaponStats("Wood Shield", WeaponType.Shield,
+                    "Bash", null, null,
+                    DamageType.Bludgeoning, DamageType.None, DamageType.None,
+                    new[] {1,4,2}, new[] {0,0,0}, new[] {0,0,0},
+                    true),
+
+                new WeaponStats("Shortbow", WeaponType.Bow,
+                    "Simple Shot", null, null,
+                    DamageType.Piercing, DamageType.None, DamageType.None,
+                    new[] {1,6,2}, new[] {0,0,0}, new[] {0,0,0},
+                    false),
+
+                new WeaponStats("Long Bow", WeaponType.Bow,
+                    "Simple Shot", null, null,
+                    DamageType.Piercing, DamageType.None, DamageType.None,
+                    new[] {1,8,0}, new[] {0,0,0}, new[] {0,0,0},
+                    false),
+
+                new WeaponStats("Heavy Crossbow", WeaponType.Crossbow,
+                    "Bolt Shot", null, null,
+                    DamageType.Piercing, DamageType.None, DamageType.None,
+                    new[] {1,8,2}, new[] {0,0,0}, new[] {0,0,0},
+                    false)
             }.AsReadOnly();
+
         }
     }
 }
